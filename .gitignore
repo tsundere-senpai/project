@@ -1,0 +1,15 @@
+# Python backend cache
+/backend/__pycache__/
+/backend/**/*.py[cod]
+/backend/**/*.pyo
+/backend/**/*.pyd
+
+# Node frontend
+/front/node_modules/
+/front/dist/
+/front/build/
+
+# Environment files
+.env
+*.env
+venv/
