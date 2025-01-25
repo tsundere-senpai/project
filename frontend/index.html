@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Online Judge</title>
+</head>
+<body>
+    <h2>Online Judge</h2>
+    <textarea id="code" rows="10" cols="50"></textarea><br>
+    <select id="language">
+        <option value="python">Python</option>
+        <option value="cpp">C++</option>
+    </select>
+    <button onclick="submitCode()">Run</button>
+    <pre id="output"></pre>
+
+    <script>
+        function submitCode() {
+            let code = document.getElementById("code").value;
+            let language = document.getElementById("language").value;
+
+            fetch('http://localhost:8000/submit/', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json'  // ✅ Ensure JSON format
+                },
+                body: JSON.stringify({ language, code })  // ✅ Send JSON properly
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("output").innerText = data.output || data.error;
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Judge</title>
+</head>
+<body>
+    <h2>Online Judge</h2>
+    <textarea id="code" rows="10" cols="50"></textarea><br>
+    <select id="language">
+        <option value="python">Python</option>
+        <option value="cpp">C++</option>
+    </select>
+    <button onclick="submitCode()">Run</button>
+    <pre id="output"></pre>
+
+    <script>
+        function submitCode() {
+            let code = document.getElementById("code").value;
+            let language = document.getElementById("language").value;
+
+            fetch('http://localhost:8000/submit/', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json'  // ✅ Ensure JSON format
+                },
+                body: JSON.stringify({ language, code })  // ✅ Send JSON properly
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("output").innerText = data.output || data.error;
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
